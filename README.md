@@ -3,6 +3,9 @@
 
 It is a simple game where player run endlessly and hit the coin to get the scores. Arrow keys will be used for move Left and Right. Space Bar will be used to jump the player.
 
+![alt text](https://github.com/himani226/Endless_Runner/blob/main/game.png)
+
+
 Unity3D version: 2021.3.6f1 
 
 There are seven scripts to handle the Endless Runner Game
