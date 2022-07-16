@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
+using UnityEngine.UI;
 
 
 public class PlayerMovement : MonoBehaviour
@@ -13,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public float horizonatalInput = 2f;
 
     public float jumpForce = 400f;
-
+    public GameObject gameOver;
     public LayerMask groundMask;
 
     private void FixedUpdate (){
@@ -43,7 +45,9 @@ public class PlayerMovement : MonoBehaviour
     public void Die()
     {
         alive = false;
+        gameOver.SetActive(true);
         Invoke("Restart",2);
+
        
     }
 
@@ -60,7 +64,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void Restart(){
          // Restart the Game
+        gameOver.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
     }
 
 }
